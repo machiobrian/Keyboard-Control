@@ -20,17 +20,17 @@ try: #lets us check for errors
         char = screen.getch()
         if char == ord('q'):
             break
-        elif char == curses.KEY_UP:
+        elif char == curses.KEY_UP: #forward spin
             gpio.output(7,True) #dependent on hoe we've set up our motors
             gpio.output(7,False)
             gpio.output(7,False)
             gpio.output(7,True)
-        elif char == curses.KEY_DOWN:
+        elif char == curses.KEY_DOWN: # reverse spin
             gpio.output(7,False)
             gpio.output(7,False)
             gpio.output(7,True)
             gpio.output(7,True)
-        elif char == curses.KEY_RIGHT:
+        elif char == curses.KEY_RIGHT: # 
             gpio.output(7,True)
             gpio.output(7,True)
             gpio.output(7,False)
